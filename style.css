@@ -8,7 +8,7 @@ main{
 }
 .sidebar{
     background-color: #021622;
-    width: fit-content;
+    width: 64px;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -271,9 +271,9 @@ main{
 @media only screen and (max-width: 850px){
     .current_chat{
         display: none;
-        width: 100%;
+        width: calc(100% - 64px);
     }
     .chats{
-        width: 100%;
+        width: calc(100% - 64px);
     }
 }
