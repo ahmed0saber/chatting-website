@@ -7,7 +7,7 @@
     <title>Chat</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onresize="check_screen()">
     <main>
         <section class="sidebar">
             <div>
@@ -15,8 +15,8 @@
                 <span></span>
             </div>
             <div>
-                <i class="fa fa-comments"></i>
-                <span>All chats</span>
+                <i class="fa fa-comments active"></i>
+                <span class="active">All chats</span>
             </div>
             <div>
                 <i class="fa fa-folder"></i>
@@ -39,12 +39,13 @@
                 <span>Edit</span>
             </div>
         </section>
+
         <section class="chats">
             <div class="form">
                 <input type="text" placeholder="Search">
             </div>
 
-            <div class="card">
+            <div class="card" onclick="chat('0')">
                 <img src="./myPic.jpg">
                 <div class="card_txt">
                     <div class="row">
@@ -58,7 +59,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card" onclick="chat('0')">
                 <img src="./myPic.jpg">
                 <div class="card_txt">
                     <div class="row">
@@ -72,10 +73,57 @@
                 </div>
             </div>
         </section>
-        <section class="current_chat">
 
+        <section class="current_chat">
+            <section class="no-chosen">
+                <p>Click on any chat to view.</p>
+            </section>
+            <section class="chosen">
+                <div class="nav">
+                    <div class="user">
+                        <div>
+                            <i class="fa fa-arrow-left" onclick="back()"></i>
+                        </div>
+                        <img src="./myPic.jpg">
+                        <div>
+                            <h6>Ahmed Saber</h6>
+                            <span>Online</span>
+                        </div>
+                    </div>
+                    <div class="settings">
+                        <i class="fa fas fa-ellipsis-h"></i>
+                    </div>
+                </div>
+
+                <div class="msg-container">
+                    <div class="msg myMSG">
+                        <div>
+                            <p>Hello, How are you ?!</p>
+                            <span>05:12 AM</span>
+                        </div>
+                    </div>
+                    <div class="msg">
+                        <div>
+                            <p>I'm fine, thank you.</p>
+                            <span>05:12 AM</span>
+                        </div>
+                    </div>
+                    <div class="msg myMSG">
+                        <div>
+                            <p>Nice...</p>
+                            <span>05:12 AM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inputs">
+                    <input type="text" placeholder="Message">
+                    <button type="button">Send</button>
+                </div>
+            </section>
         </section>
     </main>
 </body>
+<script src="./script.js"></script>
 <script src="https://kit.fontawesome.com/282bcf757e.js" crossorigin="anonymous"></script>
 </html>

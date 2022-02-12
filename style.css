@@ -23,7 +23,7 @@ main{
 }
 .sidebar div .fa{
     color: #021622;
-    text-shadow: 0px 0px 1px #bbb, 0px 0px 1px #bbb, 0px 0px 1px #bbb, 0px 0px 1px #bbb, 0px 0px 1px #bbb, 0px 0px 1px #bbb, 0px 0px 1px #bbb;
+    text-shadow: 0px 0px 2px #bbb, 0px 0px 2px #bbb, 0px 0px 2px #bbb, 0px 0px 2px #bbb, 0px 0px 2px #bbb, 0px 0px 2px #bbb, 0px 0px 2px #bbb;
     font-size: 30px;
     padding: 10px 10px 0px 10px;
     margin: 4px 4px 0px 4px;
@@ -31,6 +31,10 @@ main{
 .sidebar div span{
     color: #bbb;
     font-size: 12px;
+}
+.sidebar div .active{
+    color: #0690cc;
+    text-shadow: none;
 }
 
 
@@ -59,12 +63,21 @@ main{
     outline: none;
 }
 .chats div.card{
-    height: 64px;
+    height: 74px;
     display: flex;
-    width: 100%;
-    padding: 4px;
+    width: calc(100% - 8px);
+    padding: 8px 2px;
     box-sizing: border-box;
-    margin: 8px 0px;
+    margin: 8px 4px;
+    border: 2px solid #bbb0;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.chats div.card:hover{
+    border: 2px solid #bbb;
 }
 .chats div.card img{
     height: 100%;
@@ -111,11 +124,154 @@ main{
     width: 66%;
     height: 100vh;
 }
+.current_chat .no-chosen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+.current_chat .no-chosen p{
+    font-size: 20px;
+}
+.current_chat .chosen{
+    display: none;
+    flex-direction: column;
+    height: 100vh;
+}
+.current_chat .chosen .nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60px;
+    background-color: #bbb;
+}
+.current_chat .chosen .nav div i.fa{
+    font-size: 24px;
+}
+.current_chat .chosen .nav .user{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.current_chat .chosen .nav .user img{
+    height: calc(100% - 12px);
+    margin: 6px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.current_chat .chosen .nav .user div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 4px 12px;
+}
+.current_chat .chosen .nav .user div h6{
+    font-size: 16px;
+    color: #080808;
+}
+.current_chat .chosen .nav .user div span{
+    font-size: 13px;
+    color: #080808;
+}
+.current_chat .chosen .nav .settings{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 18px;
+}
+.current_chat .chosen .nav .settings i.fa{
+    font-size: 30px;
+    color: #080808;
+}
 
 
-@media only screen and (max-width: 840px){
+
+.current_chat .chosen .msg-container{
+    background-color: #eee;
+    height: 100%;
+}
+.current_chat .chosen .msg-container .msg{
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.current_chat .chosen .msg-container .msg.myMSG{
+    justify-content: flex-end;
+}
+.current_chat .chosen .msg-container .msg div{
+    padding: 8px;
+    background-color: #080808;
+    color: #f7f7f7;
+    width: fit-content;
+    border-radius: 0 10px 10px 10px;
+    -webkit-border-radius: 0 10px 10px 10px;
+    -moz-border-radius: 0 10px 10px 10px;
+    -ms-border-radius: 0 10px 10px 10px;
+    -o-border-radius: 0 10px 10px 10px;
+    border: 2px solid #12121212;
+}
+.current_chat .chosen .msg-container .msg.myMSG div{
+    background-color: #09d;
+    border-radius: 10px 0 10px 10px;
+    -webkit-border-radius: 10px 0 10px 10px;
+    -moz-border-radius: 10px 0 10px 10px;
+    -ms-border-radius: 10px 0 10px 10px;
+    -o-border-radius: 10px 0 10px 10px;
+}
+.current_chat .chosen .msg-container .msg div p{
+    font-size: 16px;
+}
+.current_chat .chosen .msg-container .msg div span{
+    font-size: 13px;
+    float: right;
+    margin: 4px;
+    opacity: 0.8;
+    font-weight: bold;
+}
+
+
+
+.current_chat .chosen .inputs{
+    background-color: #bbb;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+}
+.current_chat .chosen .inputs input[type="text"]{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 4px 8px;
+    font-size: 16px;
+    border-radius: 10px 0 0 10px;
+    -webkit-border-radius: 10px 0 0 10px;
+    -moz-border-radius: 10px 0 0 10px;
+    -ms-border-radius: 10px 0 0 10px;
+    -o-border-radius: 10px 0 0 10px;
+}
+.current_chat .chosen .inputs button{
+    padding: 8px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    -webkit-border-radius: 0 10px 10px 0;
+    -moz-border-radius: 0 10px 10px 0;
+    -ms-border-radius: 0 10px 10px 0;
+    -o-border-radius: 0 10px 10px 0;
+}
+
+
+
+@media only screen and (max-width: 850px){
     .current_chat{
         display: none;
+        width: 100%;
     }
     .chats{
         width: 100%;
