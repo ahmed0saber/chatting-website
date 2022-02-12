@@ -11,7 +11,7 @@
     <main>
         <section class="sidebar">
             <div>
-                <i class="fa fa-bars"></i>
+                <i class="fa fa-bars" onclick="open_side()"></i>
                 <span></span>
             </div>
             <div>
@@ -37,6 +37,73 @@
             <div>
                 <i class="fa fa-sliders"></i>
                 <span>Edit</span>
+            </div>
+        </section>
+
+        <section class="side-menu">
+            <div class="myInfo">
+                <div class="img-container">
+                    <div class="icon-img">
+                        <div onclick="close_side()" class="icon">
+                            <i class="fa fa-angle-left"></i>
+                        </div>
+                        <img src="./myPic.jpg">
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-bookmark"></i>
+                    </div>
+                </div>
+                <div class="name-phone">
+                    <div>
+                        <span>Ahmed Saber</span>
+                        <span>+20 12 0861 1892</span>
+                    </div>
+                    <div onclick="toggle()" class="icon">
+                        <i class="fa fa-angle-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="drop-down">
+                <div class="account">
+                    <img src="./myPic.jpg">
+                    <div>
+                        <span>Ahmed Saber</span>
+                    </div>
+                </div>
+                <div class="account">
+                    <img src="./myPic.jpg">
+                    <div>
+                        <span>Ahmed 2</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="side-options">
+                <div class="options">
+                    <i class="fa fa-users"></i>
+                    <span>New Group</span>
+                </div>
+                <div class="options">
+                    <i class="fa fa-users"></i>
+                    <span>New Channel</span>
+                </div>
+                <div class="options">
+                    <i class="fa fa-users"></i>
+                    <span>Contacts</span>
+                </div>
+                <div class="options">
+                    <i class="fa fa-users"></i>
+                    <span>Calls</span>
+                </div>
+                <div class="options">
+                    <i class="fa fa-users"></i>
+                    <span>Settings</span>
+                </div>
+                <div class="options">
+                    <i class="fa fa-users"></i>
+                    <span>Night Mode</span>
+                </div>
             </div>
         </section>
 

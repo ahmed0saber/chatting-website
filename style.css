@@ -39,6 +39,115 @@ main{
 
 
 
+.side-menu{
+    width: 260px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+}
+.side-menu .myInfo{
+    display: flex;
+    flex-direction: column;
+    background-color: #09d;
+}
+.side-menu .myInfo .img-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 14px 8px;
+}
+.side-menu .myInfo .img-container .icon-img{
+    display: flex;
+    flex-direction: row;
+}
+.side-menu .myInfo .img-container .icon-img img{
+    height: 50px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.side-menu .myInfo .img-container .icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+.side-menu .myInfo .name-phone{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 14px 8px;
+}
+.side-menu .myInfo .name-phone div{
+    display: flex;
+    flex-direction: column;
+    padding: 2px 10px;
+}
+.side-menu .myInfo .name-phone div *{
+    margin: 2px 0px;
+}
+.side-menu .myInfo .name-phone .icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+.side-menu .drop-down{
+    display: none;
+    background-color: #e2e2e2;
+    padding: 10px 2px;
+}
+.side-menu .drop-down .account{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 6px;
+}
+.side-menu .drop-down .account img{
+    height: 50px;
+    margin: 4px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.side-menu .drop-down .account div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+.side-menu .side-options{
+    padding: 10px;
+    background-color: #fff;
+    height: 100%;
+}
+.side-menu .side-options .options{
+    margin: 14px 4px;
+}
+.side-menu .side-options .options i.fa{
+    width: 34px;
+    font-size: 20px;
+}
+.side-menu .side-options .options span{
+    font-size: 18px;
+}
+
+
+
 .chats{
     background-color: #f7f7f7;
     width: 34%;
